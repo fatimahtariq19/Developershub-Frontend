@@ -4,7 +4,7 @@ import "../assets/styles/about.css";
 export default function About() {
     return (
         <>
-            {/* HERO SECTION */}
+            {/* HERO SECTION */} {/*check*/}
             <section className="about-section">
                 <div className="about-body" style={{ marginTop: "-2%" }}>
 
