@@ -1,0 +1,82 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+
+/* ❌ REMOVED body::before (it was breaking full site overlay) */
+
+
+/* =========================
+   CAREER HERO SECTION
+========================= */
+.portfolio-body {
+  margin: 0;
+  padding: 100px 20px;
+  height: 150px;
+  position: relative;
+  background-image: url("https://plus.unsplash.com/premium_photo-1726812099092-d0a3b2bc0864?w=1200&auto=format&fit=crop&q=60");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ✅ DARK OVERLAY ONLY ON IMAGE */
+.portfolio-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(78, 78, 78, 0.61); 
+  z-index: 1;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.portfolio-body > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.portfolio-section {
+  padding: 10px 20px;
+}
+
+/* MAIN CONTAINER */
+.portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE */
+.portfolio-left {
+  flex: 1;
+}
+
+.portfolio-left h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight:500;
+  color: #141631;
+}
+
+.portfolio-left p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.portfolio-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
